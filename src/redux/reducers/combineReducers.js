@@ -12,6 +12,5 @@ export default combineReducers({
   planetsReducers,
   spaceshipsReducers,
   speciesReducers,
-  speciesReducers,
   vehicleReducers,
 });
