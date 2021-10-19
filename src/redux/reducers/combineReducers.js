@@ -4,7 +4,7 @@ import peopleReducers from "./people";
 import planetsReducers from "./planets";
 import spaceshipsReducers from "./spaceships";
 import speciesReducers from "./species";
-import vehicleReducers from "./vehicles";
+import vehiclesReducers from "./vehicles";
 
 export default combineReducers({
   filmsReducers,
@@ -12,5 +12,5 @@ export default combineReducers({
   planetsReducers,
   spaceshipsReducers,
   speciesReducers,
-  vehicleReducers,
+  vehiclesReducers,
 });

@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import Category from "../../components/category/Category";
 
 const renderCategory = (data, setInfo, setCategory) => {
@@ -11,19 +13,42 @@ const renderCategory = (data, setInfo, setCategory) => {
   ));
 };
 
-const categoryContainer = ({ category, setInfo, setCategory }) => {
-  const DATA = [
-    { id: 1, name: "Dewey", category },
-    { id: 2, name: "Kate", category },
-    { id: 3, name: "Scott", category },
-  ];
+const CategoryContainer = ({ category, setInfo, setCategory }) => {
+  const [data, setData] = useState([]);
+  const films = useSelector((state) => state.filmsReducers);
+  const people = useSelector((state) => state.peopleReducers);
+  const planets = useSelector((state) => state.planetsReducers);
+  const spaceships = useSelector((state) => state.spaceshipsReducers);
+  const species = useSelector((state) => state.speciesReducers);
+  const vehicles = useSelector((state) => state.vehiclesReducers);
+
+  useEffect(() => {
+    switch (category) {
+      case "Films":
+        return setData(films);
+      case "People":
+        return setData(people);
+      case "Planets":
+        return setData(planets);
+      case "Spaceships":
+        return setData(spaceships);
+      case "Species":
+        return setData(species);
+      case "Vehicles":
+        return setData(vehicles);
+      default:
+        return console.log(
+          "There was an error getting the data to render category"
+        );
+    }
+  });
 
   return (
     <div>
       <h2>{category}</h2>
-      {renderCategory(DATA, setInfo, setCategory)}
+      {renderCategory(data, setInfo, setCategory)}
     </div>
   );
 };
 
-export default categoryContainer;
+export default CategoryContainer;
