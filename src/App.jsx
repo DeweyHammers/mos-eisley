@@ -8,8 +8,8 @@ const App = () => {
     <div>
       <Navbar />
       <CategoryContainer />
-      <StarwarsContainer />
-      <StarwarsInfo />
+      {/* <StarwarsContainer />
+      <StarwarsInfo /> */}
     </div>
   );
 };

@@ -1,5 +1,5 @@
-const Category = () => {
-  return <p>Category</p>;
+const Category = ({ category }) => {
+  return <button>{category}</button>;
 };
 
 export default Category;

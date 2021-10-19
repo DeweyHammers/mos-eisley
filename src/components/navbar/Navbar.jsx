@@ -1,5 +1,11 @@
 const Navbar = () => {
-  return <h1>Mos Eisley</h1>;
+  return (
+    <div>
+      <h1>
+        Mos Eisley <button>Categories</button>
+      </h1>
+    </div>
+  );
 };
 
 export default Navbar;
