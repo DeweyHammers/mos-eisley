@@ -1,6 +1,7 @@
 import Film from "../../components/info/Film";
 import Person from "../../components/info/Person";
 import Specie from "../../components/info/Specie";
+import Starship from "../../components/info/Starship";
 
 const InfoContainer = ({ info, setInfo, setCategory }) => {
   const renderInfo = () => {
@@ -28,6 +29,15 @@ const InfoContainer = ({ info, setInfo, setCategory }) => {
           <Specie
             key={info.id}
             specie={info}
+            setInfo={setInfo}
+            setCategory={setCategory}
+          />
+        );
+      case "Starships":
+        return (
+          <Starship
+            key={info.id}
+            starship={info}
             setInfo={setInfo}
             setCategory={setCategory}
           />
