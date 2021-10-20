@@ -1,12 +1,10 @@
-export const getSpecies = (setCategory) => {
-  const species = [
-    { id: 1, name: "Dewey", category: "Species" },
-    { id: 2, name: "Kate", category: "Species" },
-    { id: 3, name: "Scott", category: "Species" },
-  ];
+import axios from "axios";
 
+export const getSpecies = (setCategory) => {
   return (dispatch) => {
-    dispatch({ type: "GET_SPECIES", payload: species });
-    setCategory("Species");
+    axios.get("https://swapi.dev/api/species").then((response) => {
+      dispatch({ type: "GET_SPECIES", payload: response.data.results });
+      setCategory("Species");
+    });
   };
 };

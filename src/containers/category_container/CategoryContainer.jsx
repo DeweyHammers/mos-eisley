@@ -18,7 +18,7 @@ const CategoryContainer = ({ category, setInfo, setCategory }) => {
   const films = useSelector((state) => state.filmsReducers);
   const people = useSelector((state) => state.peopleReducers);
   const planets = useSelector((state) => state.planetsReducers);
-  const spaceships = useSelector((state) => state.spaceshipsReducers);
+  const starships = useSelector((state) => state.starshipsReducers);
   const species = useSelector((state) => state.speciesReducers);
   const vehicles = useSelector((state) => state.vehiclesReducers);
 
@@ -30,8 +30,8 @@ const CategoryContainer = ({ category, setInfo, setCategory }) => {
         return setData(people);
       case "Planets":
         return setData(planets);
-      case "Spaceships":
-        return setData(spaceships);
+      case "Starships":
+        return setData(starships);
       case "Species":
         return setData(species);
       case "Vehicles":
@@ -41,7 +41,7 @@ const CategoryContainer = ({ category, setInfo, setCategory }) => {
           "There was an error getting the data to render category"
         );
     }
-  });
+  }, [category, films, people, planets, starships, species, vehicles]);
 
   return (
     <div>

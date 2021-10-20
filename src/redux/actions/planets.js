@@ -1,12 +1,10 @@
-export const getPlanets = (setCategory) => {
-  const planets = [
-    { id: 1, name: "Dewey", category: "Planets" },
-    { id: 2, name: "Kate", category: "Planets" },
-    { id: 3, name: "Scott", category: "Planets" },
-  ];
+import axios from "axios";
 
+export const getPlanets = (setCategory) => {
   return (dispatch) => {
-    dispatch({ type: "GET_PLANETS", payload: planets });
-    setCategory("Planets");
+    axios.get("https://swapi.dev/api/planets").then((response) => {
+      dispatch({ type: "GET_PLANETS", payload: response.data.results });
+      setCategory("Planets");
+    });
   };
 };

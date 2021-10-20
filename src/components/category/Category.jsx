@@ -6,7 +6,12 @@ const Category = ({ info, setInfo, setCategory }) => {
 
   return (
     <div>
-      <h5>{info.name}</h5>
+      <img
+        style={{ width: 150, height: 150 }}
+        src={info.image}
+        alt={info.name}
+      />
+      <h5>{info.name || info.title}</h5>
       <button onClick={() => handleClick()}>More info</button>
     </div>
   );

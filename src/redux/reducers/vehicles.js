@@ -1,4 +1,4 @@
-const vehiclesRenderer = (state = [], action) => {
+const vehiclesReducers = (state = [], action) => {
   switch (action.type) {
     case "GET_VEHICLES":
       return action.payload;
@@ -7,4 +7,4 @@ const vehiclesRenderer = (state = [], action) => {
   }
 };
 
-export default vehiclesRenderer;
+export default vehiclesReducers;

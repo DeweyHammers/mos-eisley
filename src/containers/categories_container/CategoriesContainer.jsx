@@ -2,7 +2,7 @@ import Categories from "../../components/categories/Categories";
 
 const CATEGORIES = [
   "Planets",
-  "Spaceships",
+  "Starships",
   "Vehicles",
   "People",
   "Films",

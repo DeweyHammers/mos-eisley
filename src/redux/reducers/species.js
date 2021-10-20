@@ -1,4 +1,4 @@
-const speciesRenderer = (state = [], action) => {
+const speciesReducers = (state = [], action) => {
   switch (action.type) {
     case "GET_SPECIES":
       return action.payload;
@@ -7,4 +7,4 @@ const speciesRenderer = (state = [], action) => {
   }
 };
 
-export default speciesRenderer;
+export default speciesReducers;

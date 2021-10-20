@@ -1,4 +1,4 @@
-const peopleRenderer = (state = [], action) => {
+const peopleReducers = (state = [], action) => {
   switch (action.type) {
     case "GET_PEOPLE":
       return action.payload;
@@ -7,4 +7,4 @@ const peopleRenderer = (state = [], action) => {
   }
 };
 
-export default peopleRenderer;
+export default peopleReducers;

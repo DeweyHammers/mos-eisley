@@ -1,4 +1,4 @@
-const filmsRenderer = (state = [], action) => {
+const filmsReducers = (state = [], action) => {
   switch (action.type) {
     case "GET_FILMS":
       return action.payload;
@@ -7,4 +7,4 @@ const filmsRenderer = (state = [], action) => {
   }
 };
 
-export default filmsRenderer;
+export default filmsReducers;

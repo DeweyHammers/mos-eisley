@@ -1,4 +1,4 @@
-const planetsRenderer = (state = [], action) => {
+const planetsReducers = (state = [], action) => {
   switch (action.type) {
     case "GET_PLANETS":
       return action.payload;
@@ -7,4 +7,4 @@ const planetsRenderer = (state = [], action) => {
   }
 };
 
-export default planetsRenderer;
+export default planetsReducers;

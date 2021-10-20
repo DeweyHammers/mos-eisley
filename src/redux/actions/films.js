@@ -1,12 +1,10 @@
-export const getFilms = (setCategory) => {
-  const films = [
-    { id: 1, name: "Dewey", category: "Films" },
-    { id: 2, name: "Kate", category: "Films" },
-    { id: 3, name: "Scott", category: "Films" },
-  ];
+import axios from "axios";
 
+export const getFilms = (setCategory) => {
   return (dispatch) => {
-    dispatch({ type: "GET_FILMS", payload: films });
-    setCategory("Films");
+    axios.get("https://swapi.dev/api/films").then((response) => {
+      dispatch({ type: "GET_FILMS", payload: response.data.results });
+      setCategory("Films");
+    });
   };
 };

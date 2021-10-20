@@ -1,12 +1,10 @@
-export const getVehicles = (setCategory) => {
-  const vehicles = [
-    { id: 1, name: "Dewey", category: "Vehicles" },
-    { id: 2, name: "Kate", category: "Vehicles" },
-    { id: 3, name: "Scott", category: "Vehicles" },
-  ];
+import axios from "axios";
 
+export const getVehicles = (setCategory) => {
   return (dispatch) => {
-    dispatch({ type: "GET_VEHICLES", payload: vehicles });
-    setCategory("Vehicles");
+    axios.get("https://swapi.dev/api/vehicles").then((response) => {
+      dispatch({ type: "GET_VEHICLES", payload: response.data.results });
+      setCategory("Vehicles");
+    });
   };
 };
