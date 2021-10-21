@@ -17,7 +17,7 @@ const Categories = ({ category, setCategory }) => {
   const vehicles = useSelector((state) => state.vehiclesReducers);
 
   const handleClick = () => {
-    switch (category) {
+    switch (category.title) {
       case "Films":
         return films.length !== 0
           ? setCategory(category)
@@ -47,7 +47,19 @@ const Categories = ({ category, setCategory }) => {
     }
   };
 
-  return <button onClick={() => handleClick()}>{category}</button>;
+  return (
+    <div>
+      <p>___________________________</p>
+      <h2>{category.title}</h2>
+      <img
+        style={{ width: 150, height: 150 }}
+        src={category.src}
+        alt={category.title}
+        onClick={() => handleClick()}
+      />
+      <p>___________________________</p>
+    </div>
+  );
 };
 
 export default Categories;
