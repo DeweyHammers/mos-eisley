@@ -6,13 +6,15 @@ const Category = ({ info, setInfo, setCategory }) => {
 
   return (
     <div>
+      <p>_____________________________________________________</p>
       <img
         style={{ width: 150, height: 150 }}
         src={info.image}
         alt={info.name}
       />
-      <h5>{info.name || info.title}</h5>
+      <h2>{info.name || info.title}</h2>
       <button onClick={() => handleClick()}>More info</button>
+      <p>_____________________________________________________</p>
     </div>
   );
 };

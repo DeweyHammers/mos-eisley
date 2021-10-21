@@ -10,13 +10,11 @@ export const getPeople = (setCategory) => {
       await axios
         .get(`https://swapi.dev/api/people/?page=${url_page}`)
         .then((response) => {
-          response.data.results.map((person) => {
+          response.data.results.forEach((person) => {
+            const data = images[`${person.name}`];
+            person.image = data.src;
+            person.id = data.id;
             person.category = "People";
-            return images.map(
-              (image) =>
-                image.title === person.name &&
-                ((person.image = image.src), (person.id = image.id))
-            );
           });
           people.push(response.data.results);
         });

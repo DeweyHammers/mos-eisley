@@ -81,417 +81,335 @@ import Raymus_Antilles from "./Raymus-Antilles.png";
 import Sly_Moore from "./Sly-Moore.jpeg";
 import Tion_Medon from "./Tion-Medon.jpg";
 
-const images = [
-  {
+const images = {
+  "Luke Skywalker": {
     id: 1,
     src: luke_skywalker,
-    title: "Luke Skywalker",
   },
-  {
+  "C-3PO": {
     id: 2,
     src: C3PO,
-    title: "C-3PO",
   },
-  {
+  "R2-D2": {
     id: 3,
     src: R2_D2,
-    title: "R2-D2",
   },
-  {
+  "Darth Vader": {
     id: 4,
     src: Darth_Varder,
-    title: "Darth Vader",
   },
-  {
+  "Leia Organa": {
     id: 5,
     src: Leia_Organ,
-    title: "Leia Organa",
   },
-  {
+  "Owen Lars": {
     id: 6,
     src: Owen_lars,
-    title: "Owen Lars",
   },
-  {
+  "Beru Whitesun lars": {
     id: 7,
     src: Beru_Whitesun_lars,
-    title: "Beru Whitesun lars",
   },
-  {
+  "R5-D4": {
     id: 8,
     src: R5_D4,
-    title: "R5-D4",
   },
-  {
+  "Biggs Darklighter": {
     id: 9,
     src: Biggs_Darklighter,
-    title: "Biggs Darklighter",
   },
-  {
+  "Obi-Wan Kenobi": {
     id: 10,
     src: Obi_Wan_Kenobi,
-    title: "Obi-Wan Kenobi",
   },
-  {
+  "Anakin Skywalker": {
     id: 11,
     src: Anakin_Skywalker,
-    title: "Anakin Skywalker",
   },
-  {
+  "Wilhuff Tarkin": {
     id: 12,
     src: Wilhuff_Tarkin,
-    title: "Wilhuff Tarkin",
   },
-  {
+  Chewbacca: {
     id: 13,
     src: Chewbacca,
-    title: "Chewbacca",
   },
-  {
+  "Han Solo": {
     id: 14,
     src: Han_Solo,
-    title: "Han Solo",
   },
-  {
+  Greedo: {
     id: 15,
     src: Greedo,
-    title: "Greedo",
   },
-  {
+  "Jabba Desilijic Tiure": {
     id: 16,
     src: Jabba_Desilijic_Tiure,
-    title: "Jabba Desilijic Tiure",
   },
-  {
+  "Wedge Antilles": {
     id: 18,
     src: Wedge_Antilles,
-    title: "Wedge Antilles",
   },
-  {
+  "Jek Tono Porkins": {
     id: 19,
     src: Jek_Tono_Porkins,
-    title: "Jek Tono Porkins",
   },
-  {
+  Yoda: {
     id: 20,
     src: Yoda,
-    title: "Yoda",
   },
-  {
+  Palpatine: {
     id: 21,
     src: Palpatine,
-    title: "Palpatine",
   },
-  {
+  "Boba Fett": {
     id: 22,
     src: Boba_Fett,
-    title: "Boba Fett",
   },
-  {
+  "IG-88": {
     id: 23,
     src: IG_88,
-    title: "IG-88",
   },
-  {
+  Bossk: {
     id: 24,
     src: Bossk,
-    title: "Bossk",
   },
-  {
+  "Lando Calrissian": {
     id: 25,
     src: Lando_Calrissian,
-    title: "Lando Calrissian",
   },
-  {
+  Lobot: {
     id: 26,
     src: Lobot,
-    title: "Lobot",
   },
-  {
+  Ackbar: {
     id: 27,
     src: Ackbar,
-    title: "Ackbar",
   },
-  {
+  "Mon Mothma": {
     id: 28,
     src: Mon_Mothma,
-    title: "Mon Mothma",
   },
-  {
+  "Arvel Crynyd": {
     id: 29,
     src: Arvel_Crynyd,
-    title: "Arvel Crynyd",
   },
-  {
+  "Wicket Systri Warrick": {
     id: 30,
     src: Wicket_Systri_Warrick,
-    title: "Wicket Systri Warrick",
   },
-  {
+  "Nien Nunb": {
     id: 31,
     src: Nien_Nunb,
-    title: "Nien Nunb",
   },
-  {
+  "Qui-Gon Jinn": {
     id: 32,
     src: Qui_Gon_Jinn,
-    title: "Qui-Gon Jinn",
   },
-  {
+  "Nute Gunray": {
     id: 33,
     src: Nute_Gunray,
-    title: "Nute Gunray",
   },
-  {
+  "Finis Valorum": {
     id: 34,
     src: Finis_Valorum,
-    title: "Finis Valorum",
   },
-  {
+  "Padmé Amidala": {
     id: 35,
     src: Padmé_Amidala,
-    title: "Padmé Amidala",
   },
-  {
+  "Jar Jar Binks": {
     id: 36,
     src: Jar_Jar_Binks,
-    title: "Jar Jar Binks",
   },
-  {
+  "Roos Tarpals": {
     id: 37,
     src: Roos_Tarpals,
-    title: "Roos Tarpals",
   },
-  {
+  "Rugor Nass": {
     id: 38,
     src: Rugor_Nass,
-    title: "Rugor Nass",
   },
-  {
+  "Ric Olié": {
     id: 39,
     src: Ric_Olié,
-    title: "Ric Olié",
   },
-  {
+  Watto: {
     id: 40,
     src: Watto,
-    title: "Watto",
   },
-  {
+  Sebulba: {
     id: 41,
     src: Sebulba,
-    title: "Sebulba",
   },
-  {
+  "Quarsh Panaka": {
     id: 42,
     src: Quarsh_Panaka,
-    title: "Quarsh Panaka",
   },
-  {
+  "Shmi Skywalker": {
     id: 43,
     src: Shmi_Skywalker,
-    title: "Shmi Skywalker",
   },
-  {
+  "Darth Maul": {
     id: 44,
     src: Darth_Maul,
-    title: "Darth Maul",
   },
-  {
+  "Bib Fortuna": {
     id: 45,
     src: Bib_Fortuna,
-    title: "Bib Fortuna",
   },
-  {
+  "Ayla Secura": {
     id: 46,
     src: Ayla_Secura,
-    title: "Ayla Secura",
   },
-  {
+  "Ratts Tyerel": {
     id: 47,
     src: Ratts_Tyerel,
-    title: "Ratts Tyerel",
   },
-  {
+  "Dud Bolt": {
     id: 48,
     src: Dud_Bolt,
-    title: "Dud Bolt",
   },
-  {
+  Gasgano: {
     id: 49,
     src: Gasgano,
-    title: "Gasgano",
   },
-  {
+  "Ben Quadinaros": {
     id: 50,
     src: Ben_Quadinaros,
-    title: "Ben Quadinaros",
   },
-  {
+  "Mace Windu": {
     id: 51,
     src: Mace_Windu,
-    title: "Mace Windu",
   },
-  {
+  "Ki-Adi-Mundi": {
     id: 52,
     src: Ki_Adi_Mundi,
-    title: "Ki-Adi-Mundi",
   },
-  {
+  "Kit Fisto": {
     id: 53,
     src: Kit_Fisto,
-    title: "Kit Fisto",
   },
-  {
+  "Eeth Koth": {
     id: 54,
     src: Eeth_Koth,
-    title: "Eeth Koth",
   },
-  {
+  "Adi Gallia": {
     id: 55,
     src: Adi_Gallia,
-    title: "Adi Gallia",
   },
-  {
+  "Saesee Tiin": {
     id: 56,
     src: Saesee_Tiin,
-    title: "Saesee Tiin",
   },
-  {
+  "Yarael Poof": {
     id: 57,
     src: Yarael_Poof,
-    title: "Yarael Poof",
   },
-  {
+  "Plo Koon": {
     id: 58,
     src: Plo_Koon,
-    title: "Plo Koon",
   },
-  {
+  "Mas Amedda": {
     id: 59,
     src: Mas_Amedda,
-    title: "Mas Amedda",
   },
-  {
+  "Gregar Typho": {
     id: 60,
     src: Gregar_Typho,
-    title: "Gregar Typho",
   },
-  {
+  Cordé: {
     id: 61,
     src: Cordé,
-    title: "Cordé",
   },
-  {
+  "Cliegg Lars": {
     id: 62,
     src: Cliegg_Lars,
-    title: "Cliegg Lars",
   },
-  {
+  "Poggle the Lesser": {
     id: 63,
     src: Poggle_the_Lesser,
-    title: "Poggle the Lesser",
   },
-  {
+  "Luminara Unduli": {
     id: 64,
     src: Luminara_Unduli,
-    title: "Luminara Unduli",
   },
-  {
+  "Barriss Offee": {
     id: 65,
     src: Barriss_Offee,
-    title: "Barriss Offee",
   },
-  {
+  Dormé: {
     id: 66,
     src: Dormé,
-    title: "Dormé",
   },
-  {
+  Dooku: {
     id: 67,
     src: Dooku,
-    title: "Dooku",
   },
-  {
+  "Bail Prestor Organa": {
     id: 68,
     src: Bail_Prestor_Organa,
-    title: "Bail Prestor Organa",
   },
-  {
+  "Jango Fett": {
     id: 69,
     src: Jango_Fett,
-    title: "Jango Fett",
   },
-  {
+  "Zam Wesell": {
     id: 70,
     src: Zam_Wesell,
-    title: "Zam Wesell",
   },
-  {
+  "Dexter Jettster": {
     id: 71,
     src: Dexter_Jettster,
-    title: "Dexter Jettster",
   },
-  {
+  "Lama Su": {
     id: 72,
     src: Lama_Su,
-    title: "Lama Su",
   },
-  {
+  "Taun We": {
     id: 73,
     src: Taun_We,
-    title: "Taun We",
   },
-  {
+  "Jocasta Nu": {
     id: 74,
     src: Jocasta_Nu,
-    title: "Jocasta Nu",
   },
-  {
+  "R4-P17": {
     id: 75,
     src: R4_P17,
-    title: "R4-P17",
   },
-  {
+  "Wat Tambor": {
     id: 76,
     src: Wat_Tambor,
-    title: "Wat Tambor",
   },
-  {
+  "San Hill": {
     id: 77,
     src: San_Hill,
-    title: "San Hill",
   },
-  {
+  "Shaak Ti": {
     id: 78,
     src: Shaak_Ti,
-    title: "Shaak Ti",
   },
-  {
+  Grievous: {
     id: 79,
     src: Grievous,
-    title: "Grievous",
   },
-  {
+  Tarfful: {
     id: 80,
     src: Tarfful,
-    title: "Tarfful",
   },
-  {
+  "Raymus Antilles": {
     id: 81,
     src: Raymus_Antilles,
-    title: "Raymus Antilles",
   },
-  {
+  "Sly Moore": {
     id: 82,
     src: Sly_Moore,
-    title: "Sly Moore",
   },
-  {
+  "Tion Medon": {
     id: 83,
     src: Tion_Medon,
-    title: "Tion Medon",
   },
-];
+};
 
 export default images;

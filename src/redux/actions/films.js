@@ -6,13 +6,11 @@ export const getFilms = (setCategory) => {
     const films = [];
 
     await axios.get("https://swapi.dev/api/films").then((response) => {
-      response.data.results.map((film) => {
+      response.data.results.forEach((film) => {
+        const data = images[`${film.title}`];
+        film.image = data.src;
+        film.id = data.id;
         film.category = "Films";
-        return images.map(
-          (image) =>
-            image.title === film.title &&
-            ((film.image = image.src), (film.id = image.id))
-        );
       });
       films.push(response.data.results);
     });

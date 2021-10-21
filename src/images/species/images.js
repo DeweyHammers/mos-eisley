@@ -36,194 +36,155 @@ import Togruta from "./Togruta.png";
 import Kaleesh from "./Kaleesh.jpg";
 import Pauan from "./Pau'an.jpg";
 
-const images = [
-  {
+const images = {
+  Human: {
     id: 1,
     src: Human,
-    title: "Human",
   },
-  {
+  Droid: {
     id: 2,
     src: Droid,
-    title: "Droid",
   },
-  {
+  Wookie: {
     id: 3,
     src: Wookie,
-    title: "Wookie",
   },
-  {
+  Rodian: {
     id: 4,
     src: Rodian,
-    title: "Rodian",
   },
-  {
+  Hutt: {
     id: 5,
     src: Hutt,
-    title: "Hutt",
   },
-  {
+  "Yoda's species": {
     id: 6,
     src: Yodas_species,
-    title: "Yoda's species",
   },
-  {
+  Trandoshan: {
     id: 7,
     src: Trandoshan,
-    title: "Trandoshan",
   },
-  {
+  "Mon Calamari": {
     id: 8,
     src: Mon_Calamari,
-    title: "Mon Calamari",
   },
-  {
+  Ewok: {
     id: 9,
     src: Ewok,
-    title: "Ewok",
   },
-  {
+  Sullustan: {
     id: 10,
     src: Sullustan,
-    title: "Sullustan",
   },
-  {
+  Neimodian: {
     id: 11,
     src: Neimodian,
-    title: "Neimodian",
   },
-  {
+  Gungan: {
     id: 12,
     src: Gungan,
-    title: "Gungan",
   },
-  {
+  Toydarian: {
     id: 13,
     src: Toydarian,
-    title: "Toydarian",
   },
-  {
+  Dug: {
     id: 14,
     src: Dug,
-    title: "Dug",
   },
-  {
+  "Twi'lek": {
     id: 15,
     src: Twilek,
-    title: "Twi'lek",
   },
-  {
+  Aleena: {
     id: 16,
     src: Aleena,
-    title: "Aleena",
   },
-  {
+  Vulptereen: {
     id: 17,
     src: Vulptereen,
-    title: "Vulptereen",
   },
-  {
+  Xexto: {
     id: 18,
     src: Xexto,
-    title: "Xexto",
   },
-  {
+  Toong: {
     id: 19,
     src: Toong,
-    title: "Toong",
   },
-  {
+  Cerean: {
     id: 20,
     src: Cerean,
-    title: "Cerean",
   },
-  {
+  Nautolan: {
     id: 21,
     src: Nautolan,
-    title: "Nautolan",
   },
-  {
+  Zabrak: {
     id: 22,
     src: Zabrak,
-    title: "Zabrak",
   },
-  {
+  Tholothian: {
     id: 23,
     src: Tholothian,
-    title: "Tholothian",
   },
-  {
+  Iktotchi: {
     id: 24,
     src: Iktotchi,
-    title: "Iktotchi",
   },
-
-  {
+  Quermian: {
     id: 25,
     src: Quermian,
-    title: "Quermian",
   },
-  {
+  "Kel Dor": {
     id: 26,
     src: Kel_Dor,
-    title: "Kel Dor",
   },
-  {
+  Chagrian: {
     id: 27,
     src: Chagrian,
-    title: "Chagrian",
   },
-  {
+  Geonosian: {
     id: 28,
     src: Geonosian,
-    title: "Geonosian",
   },
-  {
+  Mirialan: {
     id: 29,
     src: Mirialan,
-    title: "Mirialan",
   },
-  {
+  Clawdite: {
     id: 30,
     src: Clawdite,
-    title: "Clawdite",
   },
-  {
+  Besalisk: {
     id: 31,
     src: Besalisk,
-    title: "Besalisk",
   },
-  {
+  Kaminoan: {
     id: 32,
     src: Kaminoan,
-    title: "Kaminoan",
   },
-  {
+  Skakoan: {
     id: 33,
     src: Skakoan,
-    title: "Skakoan",
   },
-  {
+  Muun: {
     id: 34,
     src: Muun,
-    title: "Muun",
   },
-
-  {
+  Togruta: {
     id: 35,
     src: Togruta,
-    title: "Togruta",
   },
-  {
+  Kaleesh: {
     id: 36,
     src: Kaleesh,
-    title: "Kaleesh",
   },
-  {
+  "Pau'an": {
     id: 37,
     src: Pauan,
-    title: "Pau'an",
   },
-];
+};
 
 export default images;

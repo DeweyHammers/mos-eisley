@@ -35,188 +35,151 @@ import Banking_clan_frigte from "./Banking-clan-frigte.jpg";
 import Belbullab_22_starfighter from "./Belbullab-22-starfighter.jpg";
 import V_wing from "./V-wing.png";
 
-const images = [
-  {
+const images = {
+  "CR90 corvette": {
     id: 1,
     src: CR90_corvette,
-    title: "CR90 corvette",
   },
-  {
+  "Star Destroyer": {
     id: 2,
     src: Star_Destroyer,
-    title: "Star Destroyer",
   },
-  {
+  "Sentinel-class landing craft": {
     id: 3,
     src: Sentinel_class_landing_craft,
-    title: "Sentinel-class landing craft",
   },
-  {
+  "Death Star": {
     id: 4,
     src: Death_Star,
-    title: "Death Star",
   },
-  {
+  "Millennium Falcon": {
     id: 5,
     src: Millennium_Falcon,
-    title: "Millennium Falcon",
   },
-  {
+  "Y-wing": {
     id: 6,
     src: Y_wing,
-    title: "Y-wing",
   },
-  {
+  "X-wing": {
     id: 7,
     src: X_wing,
-    title: "X-wing",
   },
-  {
+  "TIE Advanced x1": {
     id: 8,
     src: TIE_Advanced_x1,
-    title: "TIE Advanced x1",
   },
-  {
+  Executor: {
     id: 9,
     src: Executor,
-    title: "Executor",
   },
-  {
+  "Rebel transport": {
     id: 10,
     src: Rebel_transport,
-    title: "Rebel transport",
   },
-  {
+  "Slave 1": {
     id: 11,
     src: Slave_1,
-    title: "Slave 1",
   },
-  {
+  "Imperial shuttle": {
     id: 12,
     src: Imperial_shuttle,
-    title: "Imperial shuttle",
   },
-  {
+  "EF76 Nebulon-B escort frigate": {
     id: 13,
     src: EF76_Nebulon_B_escort_frigate,
-    title: "EF76 Nebulon-B escort frigate",
   },
-  {
+  "Calamari Cruiser": {
     id: 14,
     src: Calamari_Cruiser,
-    title: "Calamari Cruiser",
   },
-  {
+  "A-wing": {
     id: 15,
     src: A_wing,
-    title: "A-wing",
   },
-  {
+  "B-wing": {
     id: 16,
     src: B_wing,
-    title: "B-wing",
   },
-  {
+  "Republic Cruiser": {
     id: 17,
     src: Republic_Cruiser,
-    title: "Republic Cruiser",
   },
-  {
+  "Droid control ship": {
     id: 18,
     src: Droid_control_ship,
-    title: "Droid control ship",
   },
-  {
+  "Naboo fighter": {
     id: 19,
     src: Naboo_fighter,
-    title: "Naboo fighter",
   },
-
-  {
+  "Naboo Royal Starship": {
     id: 20,
     src: Naboo_Royal_Starship,
-    title: "Naboo Royal Starship",
   },
-  {
+  Scimitar: {
     id: 21,
     src: Scimitar,
-    title: "Scimitar",
   },
-  {
+  "J-type diplomatic barge": {
     id: 22,
     src: J_type_diplomatic_barge,
-    title: "J-type diplomatic barge",
   },
-  {
+  "AA-9 Coruscant freighter": {
     id: 23,
     src: AA_9_Coruscant_freighter,
-    title: "AA-9 Coruscant freighter",
   },
-  {
+  "Jedi starfighter": {
     id: 24,
     src: Jedi_starfighter,
-    title: "Jedi starfighter",
   },
-  {
+  "H-type Nubian yacht": {
     id: 25,
     src: H_type_Nubian_yacht,
-    title: "H-type Nubian yacht",
   },
-  {
+  "Republic Assault ship": {
     id: 26,
     src: Republic_Assault_ship,
-    title: "Republic Assault ship",
   },
-  {
+  "Solar Sailer": {
     id: 27,
     src: Solar_Sailer,
-    title: "Solar Sailer",
   },
-  {
+  "Trade Federation cruiser": {
     id: 28,
     src: Trade_Federation_cruiser,
-    title: "Trade Federation cruiser",
   },
-  {
+  "Theta-class T-2c shuttle": {
     id: 29,
     src: Theta_class_T_2c_shuttle,
-    title: "Theta-class T-2c shuttle",
   },
-  {
+  "Republic attack cruiser": {
     id: 30,
     src: Republic_attack_cruiser,
-    title: "Republic attack cruiser",
   },
-  {
+  "Naboo star skiff": {
     id: 31,
     src: Naboo_star_skiff,
-    title: "Naboo star skiff",
   },
-  {
+  "Jedi Interceptor": {
     id: 32,
     src: Jedi_Interceptor,
-    title: "Jedi Interceptor",
   },
-  {
+  "arc-170": {
     id: 33,
     src: arc_170,
-    title: "arc-170",
   },
-  {
+  "Banking clan frigte": {
     id: 34,
     src: Banking_clan_frigte,
-    title: "Banking clan frigte",
   },
-  {
+  "Belbullab-22 starfighter": {
     id: 35,
     src: Belbullab_22_starfighter,
-    title: "Belbullab-22 starfighter",
   },
-  {
+  "V-wing": {
     id: 36,
     src: V_wing,
-    title: "V-wing",
   },
-];
+};
 
 export default images;

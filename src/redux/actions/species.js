@@ -10,13 +10,11 @@ export const getSpecies = (setCategory) => {
       await axios
         .get(`https://swapi.dev/api/species/?page=${url_index}`)
         .then((response) => {
-          response.data.results.map((specie) => {
+          response.data.results.forEach((specie) => {
+            const data = images[`${specie.name}`];
+            specie.image = data.src;
+            specie.id = data.id;
             specie.category = "Species";
-            return images.map(
-              (image) =>
-                image.title === specie.name &&
-                ((specie.image = image.src), (specie.id = image.id))
-            );
           });
           species.push(response.data.results);
         });

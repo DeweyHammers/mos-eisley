@@ -45,7 +45,7 @@ const CategoryContainer = ({ category, setInfo, setCategory }) => {
 
   return (
     <div>
-      <h2>{category}</h2>
+      <h1>{category}</h1>
       {renderCategory(data, setInfo, setCategory)}
     </div>
   );

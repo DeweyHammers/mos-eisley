@@ -10,13 +10,11 @@ export const getStarships = (setCategory) => {
       await axios
         .get(`https://swapi.dev/api/starships/?page=${url_index}`)
         .then((response) => {
-          response.data.results.map((starship) => {
+          response.data.results.forEach((starship) => {
+            const data = images[`${starship.name}`];
+            starship.image = data.src;
+            starship.id = data.id;
             starship.category = "Starships";
-            return images.map(
-              (image) =>
-                image.title === starship.name &&
-                ((starship.image = image.src), (starship.id = image.id))
-            );
           });
           starships.push(response.data.results);
         });
