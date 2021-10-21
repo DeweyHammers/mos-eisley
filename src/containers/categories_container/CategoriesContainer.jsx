@@ -3,7 +3,11 @@ import images from "../../images/categories/images";
 
 const renderCategories = (setCategory) => {
   return images.map((category) => (
-    <Categories key={category} category={category} setCategory={setCategory} />
+    <Categories
+      key={category.id}
+      category={category}
+      setCategory={setCategory}
+    />
   ));
 };
 

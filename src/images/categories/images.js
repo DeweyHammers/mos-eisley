@@ -23,12 +23,12 @@ const images = [
   },
   {
     id: 4,
-    src: Starships,
+    src: Species,
     title: "Species",
   },
   {
     id: 5,
-    src: Species,
+    src: Starships,
     title: "Starships",
   },
   {

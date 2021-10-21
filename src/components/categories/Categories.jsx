@@ -20,27 +20,27 @@ const Categories = ({ category, setCategory }) => {
     switch (category.title) {
       case "Films":
         return films.length !== 0
-          ? setCategory(category)
+          ? setCategory(category.title)
           : dispatch(getFilms(setCategory));
       case "People":
         return people.length !== 0
-          ? setCategory(category)
+          ? setCategory(category.title)
           : dispatch(getPeople(setCategory));
       case "Planets":
         return planets.length !== 0
-          ? setCategory(category)
+          ? setCategory(category.title)
           : dispatch(getPlanets(setCategory));
       case "Starships":
         return starships.length !== 0
-          ? setCategory(category)
+          ? setCategory(category.title)
           : dispatch(getStarships(setCategory));
       case "Species":
         return species.length !== 0
-          ? setCategory(category)
+          ? setCategory(category.title)
           : dispatch(getSpecies(setCategory));
       case "Vehicles":
         return vehicles.length !== 0
-          ? setCategory(category)
+          ? setCategory(category.title)
           : dispatch(getVehicles(setCategory));
       default:
         return console.log("There was an error with setting the category");
