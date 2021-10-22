@@ -6,6 +6,7 @@ import { getPlanets } from "../../redux/actions/planets";
 import { getStarships } from "../../redux/actions/starships";
 import { getVehicles } from "../../redux/actions/vehicles";
 import { getSpecies } from "../../redux/actions/species";
+import styles from "./styles";
 
 const Categories = ({ category, setCategory }) => {
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ const Categories = ({ category, setCategory }) => {
   const starships = useSelector((state) => state.starshipsReducers);
   const species = useSelector((state) => state.speciesReducers);
   const vehicles = useSelector((state) => state.vehiclesReducers);
+  const classes = styles;
 
   const handleClick = () => {
     switch (category.title) {
@@ -52,7 +54,7 @@ const Categories = ({ category, setCategory }) => {
       <p>___________________________</p>
       <h2>{category.title}</h2>
       <img
-        style={{ width: 150, height: 150 }}
+        style={classes.image}
         src={category.src}
         alt={category.title}
         onClick={() => handleClick()}

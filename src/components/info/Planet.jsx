@@ -1,4 +1,8 @@
+import styles from "./styles";
+
 const Planet = ({ planet, setInfo, setCategory }) => {
+  const classes = styles;
+
   const handleClickBack = () => {
     setInfo(null);
     setCategory(planet.category);
@@ -6,7 +10,7 @@ const Planet = ({ planet, setInfo, setCategory }) => {
 
   return (
     <div>
-      <img src={planet.image} alt={planet.name} />
+      <img style={classes.image} src={planet.image} alt={planet.name} />
       <h1>{planet.name}</h1>
       <button onClick={() => handleClickBack()}>
         Back to {planet.category}

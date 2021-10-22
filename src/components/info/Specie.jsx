@@ -1,4 +1,8 @@
+import styles from "./styles";
+
 const Specie = ({ specie, setInfo, setCategory }) => {
+  const classes = styles;
+
   const handleClickBack = () => {
     setInfo(null);
     setCategory(specie.category);
@@ -6,7 +10,7 @@ const Specie = ({ specie, setInfo, setCategory }) => {
 
   return (
     <div>
-      <img src={specie.image} alt={specie.name} />
+      <img style={classes.image} src={specie.image} alt={specie.name} />
       <h1>{specie.name}</h1>
       <button onClick={() => handleClickBack()}>
         Back to {specie.category}

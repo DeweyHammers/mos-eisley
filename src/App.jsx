@@ -34,7 +34,6 @@ const App = () => {
     <div>
       <Navbar setCategory={setCategory} setInfo={setInfo} />
       {display()}
-      {console.log(category)}
     </div>
   );
 };

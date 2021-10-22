@@ -1,4 +1,8 @@
+import styles from "./styles";
+
 const Category = ({ info, setInfo, setCategory }) => {
+  const classes = styles;
+
   const handleClick = () => {
     setInfo(info);
     setCategory(null);
@@ -7,11 +11,7 @@ const Category = ({ info, setInfo, setCategory }) => {
   return (
     <div>
       <p>_____________________________________________________</p>
-      <img
-        style={{ width: 150, height: 150 }}
-        src={info.image}
-        alt={info.name}
-      />
+      <img style={classes.image} src={info.image} alt={info.name} />
       <h2>{info.name || info.title}</h2>
       <button onClick={() => handleClick()}>More info</button>
       <p>_____________________________________________________</p>

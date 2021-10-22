@@ -1,4 +1,8 @@
+import styles from "./styles";
+
 const Vehicle = ({ vehicle, setInfo, setCategory }) => {
+  const classes = styles;
+
   const handleClickBack = () => {
     setInfo(null);
     setCategory(vehicle.category);
@@ -6,7 +10,7 @@ const Vehicle = ({ vehicle, setInfo, setCategory }) => {
 
   return (
     <div>
-      <img src={vehicle.image} alt={vehicle.name} />
+      <img style={classes.image} src={vehicle.image} alt={vehicle.name} />
       <h1>{vehicle.name}</h1>
       <button onClick={() => handleClickBack()}>
         Back to {vehicle.category}
