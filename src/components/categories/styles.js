@@ -1,7 +1,12 @@
 const styles = {
+  card: {
+    width: "18rem",
+    margin: 5,
+    textAlign: "center",
+  },
   image: {
-    width: 150,
-    height: 150,
+    width: 260,
+    height: 200,
   },
 };
 

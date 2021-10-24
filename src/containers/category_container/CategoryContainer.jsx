@@ -1,17 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import Category from "../../components/category/Category";
-
-const renderCategory = (data, setInfo, setCategory) => {
-  return data.map((info) => (
-    <Category
-      key={info.id}
-      info={info}
-      setInfo={setInfo}
-      setCategory={setCategory}
-    />
-  ));
-};
+import { Container, Row } from "react-bootstrap";
 
 const CategoryContainer = ({ category, setInfo, setCategory }) => {
   const [data, setData] = useState([]);
@@ -43,11 +33,21 @@ const CategoryContainer = ({ category, setInfo, setCategory }) => {
     }
   }, [category, films, people, planets, starships, species, vehicles]);
 
+  const renderCategory = (data, setInfo, setCategory) => {
+    return data.map((info) => (
+      <Category
+        key={info.id}
+        info={info}
+        setInfo={setInfo}
+        setCategory={setCategory}
+      />
+    ));
+  };
+
   return (
-    <div>
-      <h1>{category}</h1>
-      {renderCategory(data, setInfo, setCategory)}
-    </div>
+    <Container>
+      <Row>{renderCategory(data, setInfo, setCategory)}</Row>
+    </Container>
   );
 };
 

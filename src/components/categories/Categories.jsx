@@ -6,6 +6,7 @@ import { getPlanets } from "../../redux/actions/planets";
 import { getStarships } from "../../redux/actions/starships";
 import { getVehicles } from "../../redux/actions/vehicles";
 import { getSpecies } from "../../redux/actions/species";
+import { Card, Button } from "react-bootstrap";
 import styles from "./styles";
 
 const Categories = ({ category, setCategory }) => {
@@ -50,17 +51,14 @@ const Categories = ({ category, setCategory }) => {
   };
 
   return (
-    <div>
-      <p>___________________________</p>
-      <h2>{category.title}</h2>
-      <img
-        style={classes.image}
-        src={category.src}
-        alt={category.title}
-        onClick={() => handleClick()}
-      />
-      <p>___________________________</p>
-    </div>
+    <Card bg="dark" variant="dark" style={classes.card}>
+      <Card.Img variant="top" src={category.src} style={classes.image} />
+      <Card.Body>
+        <Button onClick={() => handleClick()} variant="primary">
+          {category.title}
+        </Button>
+      </Card.Body>
+    </Card>
   );
 };
 

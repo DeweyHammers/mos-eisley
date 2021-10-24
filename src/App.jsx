@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "./components/navbar/Navbar";
+import NavBar from "./components/navbar/NavBar";
 import CategoriesContainer from "./containers/categories_container/CategoriesContainer";
 import CategoryContainer from "./containers/category_container/CategoryContainer";
 import InfoContainer from "./containers/info_container/InfoContainer";
@@ -32,7 +32,7 @@ const App = () => {
 
   return (
     <div>
-      <Navbar setCategory={setCategory} setInfo={setInfo} />
+      <NavBar setCategory={setCategory} setInfo={setInfo} />
       {display()}
     </div>
   );

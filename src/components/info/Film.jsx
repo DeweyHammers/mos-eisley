@@ -1,4 +1,5 @@
 import styles from "./styles";
+import { Card, Button, Container, Row, Col } from "react-bootstrap";
 
 const Film = ({ film, setInfo, setCategory }) => {
   const classes = styles;
@@ -9,22 +10,31 @@ const Film = ({ film, setInfo, setCategory }) => {
   };
 
   return (
-    <div>
-      <img style={classes.image} src={film.image} alt={film.title} />
-      <h1>{film.title}</h1>
-      <h3>Director: {film.director}</h3>
-      <h3>Producer: {film.producer}</h3>
-      <h3>Release Date: {film.release_date}</h3>
-      <h3>Episode Number: {film.episode_id}</h3>
-      <h3>Opening Crawler:</h3>
-      <p>{film.opening_crawl}</p>
-      <h3>Characters: Coming soon</h3>
-      <h3>Planets: Coming soon</h3>
-      <h3>Species: Coming soon</h3>
-      <h3>Starships: Coming soon</h3>
-      <h3>Vehicles: Coming soon</h3>
-      <button onClick={() => handleClickBack()}>Back to {film.category}</button>
-    </div>
+    <Container>
+      <Row>
+        <Col md={classes.col}>
+          <Card bg="dark" variant="dark" style={classes.card}>
+            <Card.Img style={classes.image} variant="top" src={film.image} />
+            <Card.Body style={classes.text}>
+              <Card.Title>{film.title}</Card.Title>
+              <Card.Text>Director: {film.director}</Card.Text>
+              <Card.Text>Producer: {film.producer}</Card.Text>
+              <Card.Text>Release Date: {film.release_date}</Card.Text>
+              <Card.Text>Episode Number: {film.episode_id}</Card.Text>
+              <Card.Text>Opening Crawler: {film.opening_crawl}</Card.Text>
+              <Card.Text>Characters: Coming soon</Card.Text>
+              <Card.Text>Planets: Coming soon</Card.Text>
+              <Card.Text>Species: Coming soon</Card.Text>
+              <Card.Text>Starships: Coming soon</Card.Text>
+              <Card.Text>Vehicles: Coming soon</Card.Text>
+              <Button onClick={() => handleClickBack()} variant="primary">
+                Back to {film.category}
+              </Button>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

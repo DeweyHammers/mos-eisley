@@ -1,3 +1,4 @@
+import { Card, Button } from "react-bootstrap";
 import styles from "./styles";
 
 const Category = ({ info, setInfo, setCategory }) => {
@@ -9,13 +10,15 @@ const Category = ({ info, setInfo, setCategory }) => {
   };
 
   return (
-    <div>
-      <p>_____________________________________________________</p>
-      <img style={classes.image} src={info.image} alt={info.name} />
-      <h2>{info.name || info.title}</h2>
-      <button onClick={() => handleClick()}>More info</button>
-      <p>_____________________________________________________</p>
-    </div>
+    <Card bg="dark" variant="dark" style={classes.card}>
+      <Card.Img variant="top" src={info.image} style={classes.image} />
+      <Card.Body>
+        <Card.Title style={classes.text}>{info.name || info.title}</Card.Title>
+        <Button onClick={() => handleClick()} variant="primary">
+          More info
+        </Button>
+      </Card.Body>
+    </Card>
   );
 };
 
